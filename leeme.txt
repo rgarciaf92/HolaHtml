@@ -2,4 +2,8 @@ cambio para hacer prueba de subida en dos pasos
 primero un commit
 Luego un push
 
+<<<<<<< HEAD
 nuevas pruebas para el pull-request
+=======
+nuevas pruebas para el pull request
+>>>>>>> refs/remotes/upstream/master

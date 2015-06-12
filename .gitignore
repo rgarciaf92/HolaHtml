@@ -1,12 +1,25 @@
+<<<<<<< HEAD
 ####################################
 ###### Todo lo que ignora GIT ######
 ####################################
 
 #Ficheros generados de forma automatica
+=======
+##################################
+##### Todo lo que ignora GIT  ####
+##################################
+
+#ficheros genereados de forma automatica
+>>>>>>> refs/remotes/upstream/master
 /build/
 
+<<<<<<< HEAD
 #Carpeta media con videos
 /WebContent/media
+=======
+#carpeta media con videos
+/WebContent/media/
+>>>>>>> refs/remotes/upstream/master
 
 #Configuracion Eclipse
 /.settings/
