@@ -108,10 +108,11 @@
 		  
 		  assert.ok( entradas('miercoles',15) == 3 , "miercoles  15 años 3€");
 		  assert.ok( entradas('miercoles',30) == 5 , "miercoles  30 años 5€");
-		  assert.ok( entradas('miercoles',50) == 8 , "miercoles  50 años 8€");
+		  assert.ok( entradas('miercoles',50) == 5 , "miercoles  50 años 8€");
+		  assert.ok( entradas('miercoles',51) == 8 , "miercoles  51 años 8€");
 		  
 		  assert.ok( entradas('jueves',15)    == 5 , "jueves     15 años 5€");
-		  assert.ok( entradas('jueves',30)    == 10, "jueves     30 años 10€");
+		  assert.ok( entradas('jueves',30)    == 7, "jueves     30 años 10€");
 		  
 		  assert.ok( entradas('viernes',30)   == 10, "viernes    30 años 10€");
 		  

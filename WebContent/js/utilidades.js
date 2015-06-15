@@ -19,47 +19,51 @@
  */
 function entradas(dia, edad) {
 	var precio = null;
-	switch (dia) {
-	case 'lunes':
-		if (edad <= 35) {
-			precio = 2;
-		} else {
-			precio = 5;
-		}
-		break;
-	case 'martes':
-		if (edad <= 25) {
-			precio = 2;
-		} else if (edad > 25 && edad <= 50) {
-			precio = 5;
-		} else {
-			precio = 7;
-		}
-		break;
-	case 'miercoles':
-		if (edad <= 18) {
-			precio = 3;
-		} else if (edad > 18 && edad <= 50) {
-			precio = 5;
-		} else {
-			precio = 8;
-		}
-		break;
-	case 'jueves':
-		if (edad <= 18) {
-			precio = 5;
-		} else {
-			precio = 7;
-		}
-		break;
-	case 'viernes':
-	case 'sabado':
-	case 'domingo':
-		precio = 10;
-		break;
-
-	}// end switch
-
+	if ((edad >= 0) && (!isNaN(edad))) {
+		switch (dia) {
+		case 'lunes':
+			if (edad <= 35) {
+				precio = 2;
+			} else {
+				precio = 5;
+			}
+			break;
+		case 'martes':
+			if (edad <= 25) {
+				precio = 2;
+			} else if (edad > 25 && edad <= 50) {
+				precio = 5;
+			} else {
+				precio = 7;
+			}
+			break;
+		case 'miercoles':
+			if (edad <= 18) {
+				precio = 3;
+			} else if (edad > 18 && edad <= 50) {
+				precio = 5;
+			} else {
+				precio = 8;
+			}
+			break;
+		case 'jueves':
+			if (edad <= 18) {
+				precio = 5;
+			} else {
+				precio = 7;
+			}
+			break;
+		case 'viernes':
+		case 'sabado':
+		case 'domingo':
+			precio = 10;
+			break;
+		default:
+			precio = "El dia o la edad no son correctos";
+		}// end switch
+	} else {
+		precio = "El dia o la edad no son correctos";
+	}
 	return precio;
 }
 // end:function entradas (dia,edad)
@@ -83,50 +87,58 @@ function es_par(numero) {
 }
 
 /**
- * Convierte fecha a formato español 
- * @param date objeto tipo Date con la fecha a convertir
- * @param formato CORTO: 'dd/mm/aaaa' ; LARGO: 'el 1 de enero del 2016'
- * @returns {String} : cadena de texto con la fecha convertida, si falla retorna null
+ * Convierte fecha a formato español
+ * 
+ * @param date
+ *            objeto tipo Date con la fecha a convertir
+ * @param formato
+ *            CORTO: 'dd/mm/aaaa' ; LARGO: 'el 1 de enero del 2016'
+ * @returns {String} : cadena de texto con la fecha convertida, si falla retorna
+ *          null
  */
 
-//formatos posibles para las fechas
-const CORTO = 'corto';
-const LARGO = 'largo';
+// formatos posibles para las fechas
+const
+CORTO = 'corto';
+const
+LARGO = 'largo';
 
 function convertirFecha(date, formato) {
-	
+
 	var resul = null;
-	var meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio', 'Agosto',
-	             'Septiembre','Octubre','Noviembre','Diciembre'];
+	var meses = [ 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+			'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre',
+			'Diciembre' ];
 	var dia = null;
 	var mes = null;
-		
-	if (date instanceof Date && !isNaN(date.valueOf())){
-		
-		if(date.getDate()<10){
-			dia= '0'+ date.getDate();
-		}else{
+
+	if (date instanceof Date && !isNaN(date.valueOf())) {
+
+		if (date.getDate() < 10) {
+			dia = '0' + date.getDate();
+		} else {
 			dia = date.getDate();
 		}
-		
-		if ((date.getMonth()+1)<10){
-			mes = '0' + (date.getMonth()+1);
-		}else {
-			mes = (date.getMonth()+1);
+
+		if ((date.getMonth() + 1) < 10) {
+			mes = '0' + (date.getMonth() + 1);
+		} else {
+			mes = (date.getMonth() + 1);
 		}
-		
-		switch (formato){
+
+		switch (formato) {
 		case CORTO:
-			resul = dia +'/'+ mes +'/'+date.getFullYear();
+			resul = dia + '/' + mes + '/' + date.getFullYear();
 			break;
 		case LARGO:
-			resul = "el " + dia + " de " + meses[date.getMonth()] + " del " + date.getFullYear();
+			resul = "el " + dia + " de " + meses[date.getMonth()] + " del "
+					+ date.getFullYear();
 			break;
 		default:
 			resul = null;
 		}
 	}
-		
+
 	return resul;
 
 }
