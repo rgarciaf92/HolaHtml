@@ -80,3 +80,47 @@ function es_par(numero){
 	return resul;
 }
 
+
+
+
+/****************** FUNCIONES DATE ***********************/
+
+
+/**
+ * Convierte parametro fecha a formato español
+ * @param date objeto tipo Date con la fecha a convertir
+ * @param formato CORTO: 'dd/mm/aaaa'; LARGO: 'El 1 de enero del 2016';
+ * @returns {String} cadena de texto con la fecha convertida, si falla retorna null
+ */
+
+//Formatos posibles para las fechas
+const CORTO = "corto";
+const LARGO = "largo";
+
+function convertirFecha(date , formato) {
+	var resultado = null;
+	
+	//Implementación de la funcion
+	if(date != null && date instanceof Date && (formato == CORTO || formato == LARGO)) {
+		var dia = date.getDate();
+		var mes = date.getMonth();
+		var agno = date.getFullYear();
+		var meses = new Array('enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre');
+		if (formato == CORTO) {
+			if((dia>0 && dia <32) && (mes>=9 && mes < 12) && (agno>1970)) {
+				resultado = dia + "/" + (mes+1) + "/" + agno;
+			}
+			else {
+				resultado = dia + "/0" + (mes+1) + "/" + agno;
+			}
+		} else {
+			for (i=0; i<meses.length; i++) {
+				if(i == mes) {
+					resultado = "El " + dia + " de " + meses[i] + " del " + agno;
+				} 
+			}	
+		}
+	}
+	
+	return resultado;
+}

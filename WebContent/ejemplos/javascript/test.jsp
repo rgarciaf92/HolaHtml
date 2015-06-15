@@ -16,6 +16,23 @@
   <script>
   
   
+  //TEST DE FECHAS
+  QUnit.test( "Date - fechas", function( assert ) {
+		   
+		var fecha = new Date(2015,10,15);
+		   
+		assert.ok( convertirFecha(fecha,CORTO) == "15/11/2015", "fecha corta");
+		assert.ok( convertirFecha(fecha,LARGO) == 'El 15 de noviembre del 2015', "fecha larga");
+		
+		assert.ok( convertirFecha(fecha,'formato no valido') == null , "formato de fecha invalido");
+		assert.ok( convertirFecha(null,CORTO) == null , "fecha nula");
+		assert.ok( convertirFecha(undefined,CORTO) == null , "fecha undefined");
+		assert.ok( convertirFecha('12/12/2011',CORTO) == null , "fecha no correcta");
+	   
+   });
+  
+  
+  
   QUnit.test( "Arrays / Vectores", function( assert ) {
   	var jonWayne = new Array("Jon", "Wayne", 45);
   	assert.ok ( jonWayne[0] == 'Jon', 'Posición 0 está "Jon"' );
