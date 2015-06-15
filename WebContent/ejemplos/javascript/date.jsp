@@ -10,25 +10,14 @@
 		</header>
 			
 		<div class="cnt_article">
-			
-			<script>
-				//creamos un objeto con la fecha actual
-				var fecha = new Date();
-				var fechaGMT = fecha.toGMTString();
-				var fechaLocale = fecha.toLocaleString();
-				
-				
-				document.write("* Fecha Actual: <em>" + fecha + "</em><br>");
-				document.write("* Fecha Actual GMT: <em>" + fechaGMT + "</em><br>");
-				document.write("* Fecha Actual Locale: <em>" + fechaLocale + "</em><br>");
-
-			</script>
-			
+			<!--  Caja de texto para el calendario -->
+			<p>Date: <input type="text" data-widget="calendario" class="fecha" readonly/></p>
 		</div>
 			
 		<footer>
-			Capitulo 13; pagina 316
+			<a href="https://jqueryui.com/datepicker/">DatePicker</a>
 		</footer>
+		
 			
 	</article>
 	

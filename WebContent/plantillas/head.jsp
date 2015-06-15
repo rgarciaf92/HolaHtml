@@ -24,7 +24,9 @@
   <!-- Custom IconMoon  -->
   <link rel="stylesheet" type="text/css" href="fonts/iconmoon/style.css">
 
-
+  <!-- CSS de JQuery UI para el calendario -->
+  <link rel="stylesheet" href="js/jquery-ui-1.11.4.custom/jquery-ui.css">
+  
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>

@@ -99,18 +99,19 @@ const LARGO = "largo";
 
 function convertirFecha(date , formato) {
 	var resultado = null;
+	var meses = new Array('enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre');
 	
 	//Implementación de la funcion
-	if(date != null && date instanceof Date && (formato == CORTO || formato == LARGO)) {
+	if(date instanceof Date && (formato == CORTO || formato == LARGO)) {
 		var dia = date.getDate();
 		var mes = date.getMonth();
 		var agno = date.getFullYear();
-		var meses = new Array('enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre');
+		if((dia>0 && dia <32) && (agno>1970))
 		if (formato == CORTO) {
-			if((dia>0 && dia <32) && (mes>=9 && mes < 12) && (agno>1970)) {
+			if(mes>=9 && mes < 12) {
 				resultado = dia + "/" + (mes+1) + "/" + agno;
 			}
-			else {
+			else if(mes>=0 && mes <9){
 				resultado = dia + "/0" + (mes+1) + "/" + agno;
 			}
 		} else {
