@@ -138,13 +138,19 @@
 				}
 				
 				//Caja de texto
-				cajatext.onblur = function() {
+				cajatext.onblur = function(event) {
 					console.debug("Ha entrado en el foco");
 					if(cajatext.value != '') {
 						txt.value += 'Texto Escrito: ' + cajatext.value + '\n';
 					}
 				}
 				
+				//RadioButton
+				for(i=0; i<sexo.length; i++) {
+					sexo[i].onchange = function(event) {
+						txt.value += 'Has cambiado a (' + this.value + ') ' + this.nextElementSibling.innerHTML + '\n';
+					}
+				}
 				
 			</script>
 		</div>
