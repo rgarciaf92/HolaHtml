@@ -89,9 +89,21 @@
 						<option value="bio">Bilbao</option>
 						<option value="bar">Barakaldo</option>
 					</select>
-					<input type="text" id="texto">
-					<input type="radio">
-					<input type="checkbox">
+					<input type="text" id="texto"><br>
+					
+					<input type="radio" name="sexo" value="H" id="hom">
+					<label for="hom">Hombre</label>
+					<input type="radio" name="sexo" value="M" id="muj" checked>
+					<label for="muj">Mujer</label>
+					<input type="radio" name="sexo" value="I" id="ind">
+					<label for="muj">Indeterminado</label><br>
+					
+					<input type="checkbox" name="con" value="0" id="html" checked>
+					<label for="html">HTML</label><br>
+					<input type="checkbox" name="con" value="1" id="js" checked>
+					<label for="js">JS</label><br>
+					<input type="checkbox" name="con" value="2" id="css3">
+					<label for="css3">CSS3</label>
 				</div>
 			</div>
 			
@@ -101,17 +113,22 @@
 				var boton = document.getElementById("boton");
 				var clear = document.getElementById("clear");
 				var selec = document.getElementById("selec");
+				var cajatext = document.getElementById("texto");
+				var sexo = document.getElementsByName("sexo");
 				
+				//Boton pulsar
 				boton.onclick = function(event) {
 					console.debug('Boton Pulsado');
 					txt.value += 'Boton Pulsado[x,y] ['+ event.x +','+ event.y +']\n';
 				}
 				
+				//Boton limpiar
 				clear.onclick = function(event) {
 					console.debug('Boton pulsado');
 					txt.value = '';
 				}
 				
+				//Select-option
 				selec.onchange = function(event) {
 					console.debug('Selec ha cambiado');
 					var indice = selec.selectedIndex;
@@ -119,6 +136,16 @@
 					var valor = selec.options[indice].value;
 					txt.value += 'opcion cambiada: '+ texto + '['+ valor +']\n';
 				}
+				
+				//Caja de texto
+				cajatext.onblur = function() {
+					console.debug("Ha entrado en el foco");
+					if(cajatext.value != '') {
+						txt.value += 'Texto Escrito: ' + cajatext.value + '\n';
+					}
+				}
+				
+				
 			</script>
 		</div>
 			
