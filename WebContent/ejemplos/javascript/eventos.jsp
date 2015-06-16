@@ -115,6 +115,7 @@
 				var selec = document.getElementById("selec");
 				var cajatext = document.getElementById("texto");
 				var sexo = document.getElementsByName("sexo");
+				var con = document.getElementsByName("con");
 				
 				//Boton pulsar
 				boton.onclick = function(event) {
@@ -149,6 +150,17 @@
 				for(i=0; i<sexo.length; i++) {
 					sexo[i].onchange = function(event) {
 						txt.value += 'Has cambiado a (' + this.value + ') ' + this.nextElementSibling.innerHTML + '\n';
+					}
+				}
+				
+				for(i=0; i<con.length; i++) {
+					con[i].onchange = function(event) {
+						if(this.checked) {
+							txt.value += 'Has activado (' + this.value + ') ' + this.nextElementSibling.innerHTML + '\n';
+						} else {
+							txt.value += 'Has desactivado (' + this.value + ') ' + this.nextElementSibling.innerHTML + '\n';
+						}
+												
 					}
 				}
 				
