@@ -475,7 +475,26 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	margin-left: 20px;
 }
 
+/* CONTENEDOR PARA COLUMNAS */
+.cnt_cols{
+	width:100%;
+	border: 1px solid #DDD;
+}
 
+.col1, .col2 {
+	float: left;
+	width:49%;
+	min-height: 100px;
+}
+
+.col1 {
+	border-right: 1px solid #DDD;
+} 
+
+.col2 {
+	padding: 5%;
+	width:39%;
+}
 /*
 	PAGINAS
 	Tendremos una seccion por cada pagina de nuestra Web

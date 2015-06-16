@@ -85,7 +85,12 @@
 					<li><a href="ejemplos/javascript/date.jsp">Objeto Date de JavaScript</a></li>
 				</ul>
 			</li>		
-		
+			<li>
+				<h3>Eventos</h3>
+				<ul>
+					<li><a href="ejemplos/javascript/eventos.jsp">Eventos</a></li>
+				</ul>
+			</li>
 			<li>
 				<h3>Plugins</h3>
 				<ul>

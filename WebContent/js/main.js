@@ -9,6 +9,11 @@ $(function() {
 	console.debug('document ready!');
 	
 	 $('#select').filterByText($('#textbox'), false);
+	 
+	 
+	 console.warn('tinymce deshabilitado');
+	 //tinymce.init({selector:'textarea'});
+	 
 
 	 //ASOCIAR A TODOS LOS ELEMENTOS CON 
 	 //CLASE 'FECHA' EL DATEPICKER DE JQUERY UI
@@ -20,6 +25,6 @@ $(function() {
 	 
 	 //var calen = document.querySelector('input[data-widget]');
 	 //calen.datepicker();
-	 console.debug('datepicker habilitado');
+	 console.info('datepicker habilitado');
     
   });
