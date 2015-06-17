@@ -30,6 +30,22 @@
 			
 	</article>
 	
+	<article>	
+		<header>
+			<h1>Jquery UI - DatePicker </h1>
+		</header>
+		<div class="cnt_article">
+			
+			<p>Date: <input type="text" readonly data-widget="calendario" class="fecha"></p>
+			
+	 	</div>
+			
+		<footer>
+			<a href="https://jqueryui.com/datepicker/" target="_blank">DatePicker - Jquery</a>
+		</footer>			
+			
+	</article>
+	
 </section>
 
 <jsp:include page="../../plantillas/foot.jsp"></jsp:include>

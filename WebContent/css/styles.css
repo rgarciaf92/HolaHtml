@@ -492,8 +492,9 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 } 
 
 .col2 {
-	padding: 5%;
+	padding: 2%;
 	width:39%;
+	padding-left: 3%;
 }
 /*
 	PAGINAS
@@ -617,4 +618,14 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	/*float: left;*/
 	height: 200px;
 	overflow: scroll;
+}
+
+/* EVENTOS JAVASCRIPT */
+
+.col2 label {
+	font-size: 12px;
+}
+.text {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
