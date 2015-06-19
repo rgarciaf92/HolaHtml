@@ -37,7 +37,7 @@
 */
 body {
 	background-image: url('../img/back2.jpg');
-	font-family: arial;
+	font-family: 'Aldrich';
 }
 
 figure {
@@ -83,7 +83,7 @@ h1 {
 	font-size: 50px;
 	margin-bottom: 20px;
 	color: green;
-	font-family: arial;
+	font-family: 'ekmuta';
 	text-align: center;
 }
 
@@ -92,7 +92,7 @@ strong {
 }
 
 p {
-	font-family: arial;
+	font-family: 'nueva';
 	font-size: 16px;
 	text-align: justify;
 	line-height: 20px;
@@ -173,7 +173,7 @@ nav {
 	margin: 0px auto;
 	width: 100%;
 	font-size: 12px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'nueva';
 }
 
 nav ul, nav ol {
@@ -251,7 +251,7 @@ nav h2, nav h3 {
 	margin: 0 auto;
 	width: 620px;
 	font-size: 15px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'nueva';
 	background-color: white;
 }
 #list_paginas li a, .copy{
@@ -325,7 +325,7 @@ nav {
 	margin: 0px auto;
 	width: 100%;
 	font-size: 12px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'nueva';
 }
 
 nav ul, nav ol {
@@ -406,7 +406,7 @@ form input[type="text"]:focus:required:invalid {
 	-webkit-border-radius: 28;
 	-moz-border-radius: 28;
 	border-radius: 28px;
-	font-family: Arial;
+	font-family: 'nueva';
 	color: #ffffff;
 	font-size: 20px;
 	padding: 10px 20px 10px 20px;
@@ -426,7 +426,7 @@ form input[type="text"]:focus:required:invalid {
 table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	border: 1px solid grey;
 	text-align: center;
-	font-family: arial;
+	font-family: 'nueva';
 	font-size: 35px;
 	color: #0099FF;
 }
@@ -446,7 +446,7 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 
 .numero {
 	color: #0099FF;
-	font-family: arial;
+	font-family: 'nueva';
 	font-size: 50px;
 }
 
@@ -628,4 +628,22 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 .text {
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+
+/*FONT_FACES*/
+
+@font-face {
+	font-family: 'nueva';
+	src: url('../fonts/indie.ttf');
+}
+
+@font-face {
+	font-family: 'Aldrich';
+	src: url('../fonts/aldrich.ttf');
+}
+
+@font-face {
+	font-family: 'ekmuta';
+	src: url(../fonts/lobster.ttf);
 }
