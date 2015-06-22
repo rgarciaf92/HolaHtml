@@ -1,0 +1,20 @@
+/* Reglas Media Querys */
+
+/* Se aplican estas reglas si el ancho es menor que 460px */
+@media screen and (max-width:460px) {
+	#head h1 {
+		color: red;
+		font-size: 1.2em;
+	}
+	#nav_top {
+		display: inline;
+		
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		height:45px;
+		width: 45px;
+		
+		z-index:5;
+	}
+}

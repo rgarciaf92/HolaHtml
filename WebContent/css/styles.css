@@ -10,6 +10,7 @@
    Resetear todos los estilos para cualquier navegador
 */
 @import url("reset.css");
+@import url("media.css");
 
 /***************************** 
       ClearFix
@@ -155,6 +156,7 @@ footer {
 	width: 50px;
 	height: 50px;
 }
+
 
 /************************
       MENU PRINCIPAL 
@@ -587,7 +589,7 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 }
 
 #container {
-	width: 900px;
+	max-width: 900px; /*Lo recomendable como minimo es 960px*/
 	background-color: #FFF;
 	min-height: 700px;
 	margin: 0 auto;
@@ -631,11 +633,11 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 }
 
 
-/*FONT_FACES*/
+/*************************************FONT_FACES**********************************/
 
 @font-face {
 	font-family: 'nueva';
-	src: url('../fonts/indie.ttf');
+	src: url('../fonts/pixel.ttf') format('truetype');
 }
 
 @font-face {
@@ -646,4 +648,29 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 @font-face {
 	font-family: 'ekmuta';
 	src: url(../fonts/lobster.ttf);
+}
+
+
+/*************************NAV #TOP******************************/
+
+#nav_top {
+	display: none;
+}
+
+@media screen and (max-width:460px) {
+	#head h1 {
+		color: red;
+		font-size: 1.2em;
+	}
+	#nav_top {
+		display: inline;
+		
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		height:45px;
+		width: 45px;
+		
+		z-index:5;
+	}
 }

@@ -1,6 +1,6 @@
 <nav class="clearfix"> 
  	
-  <ul class="menu">	
+  <ul class="menu"> 	
 	<li>
 		<h2>B&aacute;sicos</h2>
 		<ul>
